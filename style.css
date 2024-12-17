@@ -3,18 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     background-color: black;
     color: aliceblue;
-    font-size: 20px;
+    font-size: large;
 }
 
 header{
     text-align: center;
     margin-top:20px;
     font-family: 'Times New Roman', Times, serif;
-    color: chartreuse;
-    font-size: 35px;
+    color: whitesmoke;
+    font-size: 30px;
 }
 
 nav ul{
@@ -37,19 +38,23 @@ nav ul li a:hover{
 }
 
 .container{
+   display: flex;
+   justify-content: space-around;
+   margin: 40px;
+   width:auto
+  
+}
+.flex-item{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    margin: 50px;
-}
-.container img{
+    align-items: center;
+    border: 1px solid grey;
+    margin: 20px;
     padding: 20px;
-    width: 500px;
 }
-.container img:hover{
-    opacity: 0.9;
-}
- h3{
+
+h3{
     text-align: center;
 }
  h3 a{
@@ -59,6 +64,7 @@ nav ul li a:hover{
 h3 a:hover{
     opacity: 0.9;
 }
+
 .list{
     display: flex;
     flex-direction: column;
@@ -77,21 +83,60 @@ h3 a:hover{
 .list li a:hover{
     opacity: 0.7;
 }
+
 footer{
     margin-top: 150px;
     margin-bottom: 20px;
 }
 .footer{
-    display: flex;
+     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: center;
-    padding:20px;
+    align-items: center; 
+    
 }
 .footer p a {
-    text-decoration: none;
-    color: lightgoldenrodyellow;
+   text-decoration: none;
+   color: antiquewhite;
 }
-.footer p{
-    padding:10px;
+.footer p a:hover{
+    opacity: 0.8;
+}
+
+@media (max-width:1300px) {
+    .container{
+        flex-direction: column;
+
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width:300px;
+    }
+    header{
+        font-size: 25px;
+    }
+}
+
+@media (max-width:750px){
+    .flex{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        margin-left: 15px;
+    }
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px;
+    }
+    nav ul li{
+        margin:10px;
+        
+    }
 }
